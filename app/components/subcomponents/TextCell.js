@@ -25,7 +25,7 @@ const styles = {
   viewStyle: {
     alignItems: 'flex-start',
     position: 'relative',
-    height: 60,
+    height: 30,
     flex: 1,
     flexDirection: 'row',
     opacity: .7

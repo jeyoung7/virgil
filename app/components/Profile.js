@@ -25,6 +25,7 @@ export default class Profile extends Component  {
       name: "",
       nation: "",
       religion: "",
+      politics: ""
     }
 
 }
@@ -35,10 +36,13 @@ export default class Profile extends Component  {
       let nation = snapshot.val().nation;
       let name = snapshot.val().name;
       let religion = snapshot.val().religion;
+      let politics = snapshot.val().politics;
+
     this.setState({
      name: name,
      nation: nation,
      religion: religion,
+     politics: politics
    });
 
  });
@@ -64,13 +68,19 @@ export default class Profile extends Component  {
         <Button
           primary
           title="Back"
-          //style={styles.rightButton}
           onPress= {() => this.props.navigation.navigate("Main")}
-
         >
           Log out
         </Button>
-        <InfoCell name={this.state.name} religion={this.state.religion } nation={this.state.nation } />
+        <Button
+          primary
+          title="Edit"
+          onPress= {() => this.props.navigation.navigate("EditProfile")}
+        >
+          Edit
+        </Button>
+        <InfoCell style = {{padding: 20,flex:1}} name={this.state.name} religion={this.state.religion } nation={this.state.nation } politics={this.state.politics}/>
+
 
 
 

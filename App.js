@@ -5,6 +5,7 @@ import Login from './app/components/Login';
 import Main from './app/components/Main';
 import Register from './app/components/Register';
 import Profile from './app/components/Profile';
+import EditProfile from './app/components/EditProfile';
 
 import ForgetPassword from './app/components/ForgetPassword';
 
@@ -106,7 +107,7 @@ export default (App = StackNavigator({
   EditProfile: {
     screen: EditProfile,
     navigationOptions: {
-      title: 'EditProfile'
+      title: 'EditProfile',
     }
   }
 }));
